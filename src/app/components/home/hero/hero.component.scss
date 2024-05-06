@@ -4,5 +4,40 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 0 0 80px 80px;
+    border-radius: 0 0 40px 40px;
+    padding: 0 40px;
+    gap: 32px;
+
+    img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    form {
+        max-width: 600px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        input, button {
+            padding: 12px 16px;
+            font-size: var(--action-size);
+            font-weight: 500;
+            border: none;
+            outline: none;
+        }
+
+        input {
+            color: var(--opacity-black-color);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            transition-duration: 0.25s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
 }
