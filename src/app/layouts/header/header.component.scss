@@ -1,0 +1,43 @@
+header {
+    position: fixed;
+    top: 0;
+
+    nav {
+        height: fit-content;
+        padding: 16px 40px;
+
+        ul {
+            list-style: none;
+            gap: 16px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    border-bottom: solid 2px transparent;
+                    transition-duration: 0.25s;
+
+                    &:hover {
+                        border-bottom: solid 2px var(--secondary-color);
+                    }
+                }
+
+                button {
+                    border: solid 2px var(--secondary-color);
+                    background-color: transparent;
+                    color: var(--white-color);
+                    padding: 8px 16px;
+                    transition-duration: 0.25s;
+                    font-weight: 500;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+
+                .register {
+                    background-color: var(--secondary-color);
+                }
+            }
+        }
+    }
+}
