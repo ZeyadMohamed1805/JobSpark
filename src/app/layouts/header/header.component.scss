@@ -39,5 +39,35 @@ header {
                 }
             }
         }
+
+        .menu {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    header {
+        background: var(--opacity-primary-color);
+
+        nav {
+            display: flex !important;
+            justify-content: center !important;
+            cursor: pointer;
+            transition-duration: 0.25;
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            ul {
+                display: none !important;
+            } 
+
+            .menu {
+                display: block;
+                width: 32px;
+            }
+        }
     }
 }
