@@ -6,3 +6,73 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+
+:root {
+    --primary-color: #008080;
+    --secondary-color: #9ECB05;
+    --grey-color: #D0D0D0;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --span-size: 12px;
+    --paragraph-size: 16px;
+    --action-size: 20px;
+    --header-three-size: 24px;
+    --header-two-size: 28px;
+    --header-one-size: 32px;
+}
+
+.custom-bg-primary {
+    background-color: var(--primary-color);
+}
+
+.custom-bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+.custom-bg-white {
+    background-color: var(--white-color);
+}
+
+.custom-text-primary {
+    color: var(--primary-color);
+}
+
+.custom-text-secondary {
+    color: var(--secondary-color);
+}
+
+.custom-text-white {
+    color: var(--white-color);
+}
+
+.custom-text-black {
+    color: var(--black-color);
+}
+
+.custom-text-grey {
+    color: var(--grey-color);
+}
+
+.custom-h1-size {
+    font-size: var(--header-one-size);
+}
+
+.custom-h2-size {
+    font-size: var(--header-two-size);
+}
+
+.custom-h3-size {
+    font-size: var(--header-three-size);
+}
+
+.custom-action-size {
+    font-size: var(--action-size);
+}
+
+.custom-p-size {
+    font-size: var(--paragraph-size);
+}
+
+.custom-span-size {
+    font-size: var(--span-size);
+}
