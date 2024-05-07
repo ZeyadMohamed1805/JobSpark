@@ -1,0 +1,77 @@
+.vacancy-card {
+    max-width: 360px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px 16px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .vacancy-card-body {
+
+        h3 {
+            font-size: var(--header-three-size);
+            font-weight: 700;
+        }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+
+            h4 {
+                color: var(--opacity-black-color);
+                font-size: var(--action-size);
+                font-weight: 700;
+            }
+
+            div {
+                background-color: var(--grey-color);
+                color: var(--black-color);
+                padding: 4px 8px;
+                border-radius: 24px;
+                text-align: center;
+                transition-duration: 0.25s;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+    }
+
+    .vacancy-card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        button {
+            border: none;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 8px 16px;
+            transition-duration: 0.25s;
+            font-weight: 500;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        .apply {
+            background-color: var(--secondary-color);
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .vacancy-card {
+        max-width: none;
+    }
+}

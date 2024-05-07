@@ -1,0 +1,37 @@
+.vacancies {
+    width: 100%;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    h3 {
+        font-size: var(--header-three-size);
+        font-weight: 700;
+        border-bottom: solid 2px var(--secondary-color);
+        width: fit-content;
+    }
+
+    .cards-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 860px) {
+    .vacancies .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .vacancies .cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

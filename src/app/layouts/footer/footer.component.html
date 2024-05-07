@@ -1,0 +1,46 @@
+<footer>
+	<div class="footer-container">
+		<div class="content">
+			<img src="../../../assets/images/horizontal-logo.svg" alt="Logo" />
+			<ul class="nav-list">
+				<li>Pages</li>
+				<hr />
+				@for( navLink of navLinks; track navLink ) {
+				<li>
+					<a [href]="navLink">{{ navLink | titlecase }}</a>
+				</li>
+				}
+			</ul>
+			<ul>
+				<li>Account</li>
+				<hr />
+				@if(false) {
+				<li>
+					<button>
+						<a routerLink="account">Profile</a>
+					</button>
+				</li>
+				<li>
+					<button>Logout</button>
+				</li>
+				} @else { @for( navButton of navButtons; track navButton; ) {
+				<li>
+					<button>
+						{{ navButton | titlecase }}
+					</button>
+				</li>
+				} }
+			</ul>
+			<input
+				type="search"
+				placeholder="Search"
+				aria-label="Number"
+				class="main-search"
+			/>
+		</div>
+		<hr />
+		<div class="copyrights">
+			<p>Copyright - Zeyad Mohamed</p>
+		</div>
+	</div>
+</footer>
