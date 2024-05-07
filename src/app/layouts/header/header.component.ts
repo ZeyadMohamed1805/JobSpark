@@ -1,5 +1,6 @@
 import { TitleCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { navLinks, navButtons } from './header.component.constants';
 
 @Component({
 	selector: 'app-header',
@@ -9,6 +10,6 @@ import { Component } from '@angular/core';
 	styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-	navLinks: Array<string> = ['home', 'jobs', 'guidelines'];
-	navButtons: Array<string> = ['login', 'register'];
+	navLinks: Array<string> = navLinks;
+	navButtons: Array<string> = navButtons;
 }

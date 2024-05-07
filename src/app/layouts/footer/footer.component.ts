@@ -1,6 +1,7 @@
 import { TitleCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { navLinks, navButtons } from './footer.component.constants';
 
 @Component({
 	selector: 'app-footer',
@@ -10,6 +11,6 @@ import { RouterLink } from '@angular/router';
 	styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-	navLinks: Array<string> = ['home', 'jobs', 'guideline'];
-	navButtons: Array<string> = ['login', 'register'];
+	navLinks: Array<string> = navLinks;
+	navButtons: Array<string> = navButtons;
 }
