@@ -1,0 +1,38 @@
+.card {
+    width: 100%;
+    background-color: var(--primary-color); 
+    border: none; 
+}
+
+.card-body {    
+    gap: 8px;
+}
+
+.card-title {
+    font-size: 24px; 
+}
+
+.card-text {
+    font-size: 16px; 
+    max-width: 360px;
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white-color)
+}
+
+.bg-primary {
+    background-color: var(--primary-color); 
+}
+
+button {
+    width: 133px;
+    height: 37px;   
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: var( --secondary-color);
+    font-size: 16px;
+    color: var(--white-color);
+    text-align: center;    
+}
