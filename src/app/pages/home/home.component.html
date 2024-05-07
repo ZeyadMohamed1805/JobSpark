@@ -1,5 +1,7 @@
 <div class="home w-100 min-vh-100 d-flex flex-column">
 	<app-hero />
+  <app-features></app-features>
+  <app-browse-now></app-browse-now>
 	@for(data of vacancyData; track $index) {
 	<app-vacancies [data]="data" />
 	@if( $first ) {

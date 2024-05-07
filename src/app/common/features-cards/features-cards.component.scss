@@ -1,0 +1,35 @@
+
+.card {
+    width: 100%;
+    max-width: 240px;
+    height: 180px;
+    padding: 16px;
+    background-color: var(--white-color); 
+    border: 1px solid #ccc;    
+    position: relative;
+}
+
+span{
+color: var(--primary-color);
+}
+
+.card-body{
+gap: 8px;
+
+}
+
+.card-title{
+    font-size: 40px;
+}
+
+.card-text{
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.card:hover .card-text {
+    text-decoration: underline ; 
+    text-decoration-color: var(--secondary-color);
+}
+
