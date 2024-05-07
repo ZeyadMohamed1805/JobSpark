@@ -1,6 +1,10 @@
 header {
     position: absolute;
     top: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     nav {
         height: fit-content;
