@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="home w-100 min-vh-100 d-flex flex-column">
+	<app-hero />
+	@for(data of vacancyData; track $index) {
+	<app-vacancies [data]="data" />
+	@if( $first ) {
+	<hr />
+	} }
+</div>

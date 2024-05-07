@@ -1,0 +1,23 @@
+<header class="w-100 d-flex justify-content-center">
+	<nav class="w-100 d-flex align-items-center justify-content-between">
+		<ul class="nav-links d-flex align-items-center">
+			@for( link of navLinks; track link ) {
+			<li>
+				<a [href]="link" class="custom-text-white">
+					{{ link | titlecase }}
+				</a>
+			</li>
+			}
+		</ul>
+		<ul class="nav-buttons d-flex align-items-center">
+			@for(button of navButtons; track button) {
+			<li>
+				<button [class]="button">
+					{{ button | titlecase }}
+				</button>
+			</li>
+			}
+		</ul>
+		<img class="menu" src="../../../assets/icons/menu.svg" alt="Menu" />
+	</nav>
+</header>
