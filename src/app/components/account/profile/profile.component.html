@@ -1,1 +1,25 @@
-<p>profile works!</p>
+<div class="profile">
+	<h3>Company Profile</h3>
+	<div class="data-container">
+		@for( data of profileData; track $index ) {
+		<div>
+			<span> {{ data.type }}: </span>
+			<span>
+				{{ data.value }}
+				@if($last || $index === profileData.length - 2) {
+				<span class="plus"> + </span>
+				}
+			</span>
+		</div>
+		}
+	</div>
+	<hr />
+	<p>
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt sit
+		ipsa maiores dolor? Fuga, similique? Impedit necessitatibus corrupti
+		deleniti debitis sunt et ipsum voluptatum nisi enim at. Corrupti quod
+		corporis ducimus nisi autem, consequuntur consectetur! Cum, sit commodi
+		nihil quis consequatur dignissimos eveniet itaque dicta eaque rerum
+		saepe neque temporibus.
+	</p>
+</div>

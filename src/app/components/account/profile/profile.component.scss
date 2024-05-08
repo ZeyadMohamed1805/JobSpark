@@ -1,0 +1,36 @@
+.profile {
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h3 {
+        width: fit-content;
+        font-size: var(--header-three-size);
+        font-weight: 700;
+        color: var(--black-color);
+        border-bottom: solid 2px var(--secondary-color);
+    }
+
+    .data-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+
+        span {
+            font-size: var(--action-size);
+        }
+
+        span:first-child {
+            font-weight: 500;
+        }
+
+        .plus {
+            color: var(--primary-color);
+        }
+    }
+}
