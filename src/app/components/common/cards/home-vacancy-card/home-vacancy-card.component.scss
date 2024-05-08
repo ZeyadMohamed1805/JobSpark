@@ -52,6 +52,7 @@
 
     .vacancy-card-footer {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
@@ -62,6 +63,7 @@
             color: var(--white-color);
             padding: 8px 16px;
             transition-duration: 0.25s;
+            border-radius: 8px;
             font-weight: 500;
 
             &:hover {
@@ -78,5 +80,11 @@
 @media (max-width: 760px) {
     .vacancy-card {
         max-width: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .vacancy-card .vacancy-card-footer button {
+        width: 100%;
     }
 }
