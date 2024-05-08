@@ -1,10 +1,5 @@
-<div class=" class d-flex " >
-    @for (item of cards; track $index) {
-        <!-- <p> {{ item.title }}</p>
-      <p> {{ item.number }}</p> -->
-      <app-features-cards [c]="item" ></app-features-cards>
-    }
-  </div>
-
-  
-
+<div class="feature-container">
+	@for (card of featureCards; track $index) {
+	<app-features-cards [data]="card" />
+	}
+</div>
