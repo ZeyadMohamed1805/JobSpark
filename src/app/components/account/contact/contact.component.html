@@ -1,0 +1,13 @@
+<div class="contact">
+	<h3>Contact</h3>
+	<div class="data-container">
+		@for( data of contactData; track $index ) {
+		<div>
+			<span> {{ data.type }}: </span>
+			<span>
+				{{ data.value }}
+			</span>
+		</div>
+		}
+	</div>
+</div>
