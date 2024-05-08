@@ -4,5 +4,12 @@
     padding: 120px 40px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
+
+    .details-container {
+        border: solid 2px var(--grey-color);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
 }
