@@ -1,0 +1,35 @@
+.skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h3 {
+        width: fit-content;
+        font-size: var(--header-three-size);
+        font-weight: 700;
+        color: var(--black-color);
+        border-bottom: solid 2px var(--secondary-color);
+    }
+
+    .data-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+
+        span {
+            background-color: var(--grey-color);
+            font-size: var(--span-size);
+            color: var(--opacity-black-color);
+            padding: 8px 16px;
+            border-radius: 24px;
+            transition-duration: 0.25s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
