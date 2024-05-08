@@ -7,7 +7,7 @@
     gap: 16px;
 
     .intro-container {
-        width: 75%;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
@@ -21,7 +21,14 @@
             align-self: flex-start;
         }
 
-        div {
+        hr {
+            background-color: var(--black-color);
+            height: 1px;
+            width: 100%;
+            border: none;
+        }
+
+        .data-container {
             display: flex;
             flex-direction: column;
             gap: 4px;
@@ -40,25 +47,39 @@
                 font-weight: 700;
             }
 
-            p {
-                color: var(--black-color);
-                font-size: var(--paragraph-size);       
-                margin: 0;     
+            div {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 16px;
+
+                p {
+                    color: var(--black-color);
+                    font-size: var(--paragraph-size);       
+                    margin: 0;     
+                }
+    
+                button {
+                    background-color: var(--primary-color);
+                    color: var(--white-color);
+                    font-weight: 500;
+                    border-radius: 8px;
+                    border: none;
+                    padding: 8px 16px;
+                    transition-duration: 0.25s;
+                    white-space: nowrap;
+            
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
             }
         }
     }
+}
 
-    button {
-        background-color: var(--primary-color);
-        color: var(--white-color);
-        font-weight: 500;
-        border-radius: 8px;
-        border: none;
-        padding: 8px 16px;
-        transition-duration: 0.25s;
-
-        &:hover {
-            opacity: 0.5;
-        }
+@media (max-width: 768px) {
+    .intro .intro-container .data-container div {
+        flex-wrap: wrap;
     }
 }
