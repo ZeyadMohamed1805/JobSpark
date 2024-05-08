@@ -1,0 +1,68 @@
+<div class="vacancy-card shadow-sm">
+	<div class="image-container shadow">
+		<img src="../../../../../assets/images/hero.svg" alt="Logo" />
+	</div>
+	<div class="content">
+		<div class="upper-section">
+			<div class="upper-left">
+				<h3>
+					{{ data?.title }}
+				</h3>
+				<h4>
+					{{ data?.company }}
+				</h4>
+				<div>
+					<span> {{ data?.date?.getDay() }} days ago</span>
+					<span>
+						{{ "Full Time" }}
+					</span>
+				</div>
+			</div>
+			<div class="upper-right">
+				<div class="upper-top">
+					<div>
+						<img
+							src="../../../../../assets/icons/count.svg"
+							alt="Count"
+						/>
+						<span>
+							{{ data?.reviews }}
+							Reviews
+						</span>
+					</div>
+					<div>
+						<img
+							src="../../../../../assets/icons/applicant.svg"
+							alt="Applicant"
+						/>
+						<span>
+							{{ data?.applicants }}
+							Applicants
+						</span>
+					</div>
+				</div>
+				<div class="categories">
+					@for( category of data?.categories; track $index ) {
+					<span>
+						{{ category }}
+					</span>
+					}
+				</div>
+			</div>
+		</div>
+		<div class="lower-section">
+			<p>
+				<!-- {{ data?.description }} -->
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+				Architecto porro cum nisi ipsa magni numquam obcaecati assumenda
+				aperiam inventore? Hic aut eveniet accusamus ea tenetur nesciunt
+				commodi, exercitationem possimus rerum corporis, culpa, omnis
+				saepe cupiditate.
+			</p>
+			<div>
+				<button>Visit Company</button>
+				<button class="apply">Apply Now</button>
+			</div>
+		</div>
+	</div>
+</div>

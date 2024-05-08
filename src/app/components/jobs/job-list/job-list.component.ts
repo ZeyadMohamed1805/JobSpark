@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { JobsVacanyCardComponent } from '../../common/cards/jobs-vacany-card/jobs-vacany-card.component';
+import { JobsVacancyCardComponent } from '../../common/cards/jobs-vacancy-card/jobs-vacancy-card.component';
+import { TJobsVacancy } from '../../common/cards/jobs-vacancy-card/jobs-vacancy-card.types';
+import { data } from './job-list.component.constants';
 
 @Component({
 	selector: 'app-job-list',
 	standalone: true,
-	imports: [JobsVacanyCardComponent],
+	imports: [JobsVacancyCardComponent],
 	templateUrl: './job-list.component.html',
 	styleUrl: './job-list.component.scss',
 })
-export class JobListComponent {}
+export class JobListComponent {
+	vacancies: Array<TJobsVacancy> = data;
+}

@@ -1,7 +1,5 @@
-<div>
-	<app-jobs-vacany-card />
-	<app-jobs-vacany-card />
-	<app-jobs-vacany-card />
-	<app-jobs-vacany-card />
-	<app-jobs-vacany-card />
+<div class="jobs-list">
+	@for(vacancy of vacancies; track $index) {
+	<app-jobs-vacancy-card [data]="vacancy" />
+	}
 </div>
