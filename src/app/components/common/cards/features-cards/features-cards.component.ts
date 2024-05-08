@@ -1,5 +1,5 @@
-import { Component, Input, input } from '@angular/core';
-import { card } from '../../../home/features/feature.type';
+import { Component, Input } from '@angular/core';
+import { TFeatureCard } from '../../../home/features/features.component.types';
 
 @Component({
 	selector: 'app-features-cards',
@@ -9,5 +9,5 @@ import { card } from '../../../home/features/feature.type';
 	styleUrl: './features-cards.component.scss',
 })
 export class FeaturesCardsComponent {
-	@Input() c: card = { title: ' ', number: 0 };
+	@Input() data: TFeatureCard | null = null;
 }
