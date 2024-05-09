@@ -1,0 +1,8 @@
+<div class="open-vacancies">
+	<h3>Open Vacancies</h3>
+	<div class="data-container">
+		@for( vacancy of vacancyData; track $index ) {
+		<app-jobs-vacancy-card [data]="vacancy" />
+		}
+	</div>
+</div>
