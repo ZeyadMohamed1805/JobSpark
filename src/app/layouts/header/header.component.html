@@ -12,7 +12,7 @@
 		<ul class="nav-buttons d-flex align-items-center">
 			@for(button of navButtons; track button) {
 			<li>
-				<button [class]="button">
+				<button [class]="button" (click)="openDialog($index)" >
 					{{ button | titlecase }}
 				</button>
 			</li>
