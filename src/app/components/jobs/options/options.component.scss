@@ -1,0 +1,13 @@
+.options {
+    width: 800px;
+    padding: 32px;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color:red;
+    background-color: green;
+}
+
+::ng-deep .mat-ink-bar {
+    background-color: var(--secondary-color) !important;
+    }
