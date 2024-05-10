@@ -1,13 +1,35 @@
 .options {
-    width: 800px;
+    width: 100%;
     padding: 16px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 
-::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-    color:red;
-    background-color: green;
-}
+    .apply {
+        width: 100%;
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+        font-weight: 500;
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: none;
+        transition-duration: 0.25s;
 
-::ng-deep .mat-ink-bar {
-    background-color: var(--secondary-color) !important;
+        &:hover {
+            opacity: 0.5;
+        }
     }
+}
+
+::ng-deep .mat-mdc-tab-group {
+    width: 100%;
+} 
+
+::ng-deep .mat-mdc-dialog-panel {
+    width: 100%;
+    max-width: 800px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
