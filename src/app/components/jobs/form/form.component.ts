@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
 	selector: 'app-form',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 	templateUrl: './form.component.html',
 	styleUrl: './form.component.scss',
 })
-export class FormComponent {}
+export class FormComponent {
+	constructor(private dialog: MatDialog) {}
+
+	onFilterOptionsClick(): void {}
+}
