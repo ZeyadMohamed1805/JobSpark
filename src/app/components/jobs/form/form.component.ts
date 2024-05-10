@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { OptionsComponent } from '../options/options.component';
 
 @Component({
 	selector: 'app-form',
@@ -11,5 +12,8 @@ import { MatDialog } from '@angular/material/dialog';
 export class FormComponent {
 	constructor(private dialog: MatDialog) {}
 
-	onFilterOptionsClick(): void {}
+	onFilterOptionsClick(event: any): void {
+		event.preventDefault();
+		this.dialog.open<OptionsComponent>(OptionsComponent);
+	}
 }
