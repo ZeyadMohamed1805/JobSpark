@@ -13,5 +13,7 @@ import { vacancyData } from './home.component.constants';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+  
 	vacancyData = vacancyData;
 }
