@@ -1,0 +1,9 @@
+::ng-deep .mat-mdc-radio-group {
+    min-height: 366.4px;
+    display: flex;
+    flex-direction: column;
+    
+    .mdc-label {
+        font-size: var(--paragraph-size);
+    }
+}

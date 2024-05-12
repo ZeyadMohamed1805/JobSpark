@@ -1,0 +1,46 @@
+.filter {
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    select, option {
+        background-color: var(--white-color);
+        color: var(--opacity-black-color);
+        border: solid 2px var(--grey-color);
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+    .range-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            input {
+                width: 100%;
+                background-color: var(--white-color);
+                color: var(--opacity-black-color);
+                border: solid 2px var(--grey-color);
+                outline: none;
+                padding: 8px 16px;
+                border-radius: 8px;
+                min-width: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .filter .range-container div {
+        flex-wrap: wrap;
+    }
+}
