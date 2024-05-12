@@ -8,8 +8,5 @@ import { FooterComponent } from './layouts/footer/footer.component';
 	standalone: true,
 	imports: [RouterOutlet, HeaderComponent, FooterComponent],
 	templateUrl: './app.component.html',
-	styleUrl: './app.component.scss',
 })
-export class AppComponent {
-	title = 'JobSpark';
-}
+export class AppComponent {}
