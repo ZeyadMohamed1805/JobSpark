@@ -1,5 +1,5 @@
 import { alphabet } from './alphabet';
-import { EOrderType } from './alphabet.types';
+import { EOrderType } from '../sorting.types';
 
 describe('alphabet', () => {
 	it('should return the data sorted from A to Z', () => {

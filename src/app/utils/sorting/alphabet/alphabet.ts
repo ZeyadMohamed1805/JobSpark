@@ -1,4 +1,4 @@
-import { EOrderType } from './alphabet.types';
+import { EOrderType } from '../sorting.types';
 
 export const alphabet = (data: Array<any>, order: EOrderType) => {
 	return order === EOrderType.ASC
