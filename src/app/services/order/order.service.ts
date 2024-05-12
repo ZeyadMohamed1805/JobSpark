@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { EOrderType } from '../../utils/alphabet/alphabet.types';
-import { alphabet } from '../../utils/alphabet/alphabet';
+import { EOrderType } from '../../utils/sorting/sorting.types';
+import { alphabet } from '../../utils/sorting/alphabet/alphabet';
+import { recent } from '../../utils/sorting/recent/recent';
+import { active } from '../../utils/sorting/active/active';
 
 @Injectable({
 	providedIn: 'root',
@@ -11,18 +13,10 @@ export class OrderService {
 	}
 
 	recent(data: Array<any>, order: EOrderType) {
-		return data;
-	}
-
-	rate(data: Array<any>, order: EOrderType) {
-		return data;
-	}
-
-	salary(data: Array<any>, order: EOrderType) {
-		return data;
+		return recent(data, order);
 	}
 
 	active<T>(data: Array<T>, order: EOrderType): Array<T> {
-		return data;
+		return active(data, order);
 	}
 }
