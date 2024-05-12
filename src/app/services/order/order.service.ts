@@ -1,26 +1,28 @@
 import { Injectable } from '@angular/core';
+import { EOrderType } from '../../utils/alphabet/alphabet.types';
+import { alphabet } from '../../utils/alphabet/alphabet';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class OrderService {
-	alphabet<T>(data: Array<T>, order: string): Array<T> {
+	alphabetically(data: Array<any>, order: EOrderType) {
+		return alphabet(data, order);
+	}
+
+	recent(data: Array<any>, order: EOrderType) {
 		return data;
 	}
 
-	recent<T>(data: Array<T>, order: string): Array<T> {
+	rate(data: Array<any>, order: EOrderType) {
 		return data;
 	}
 
-	rate<T>(data: Array<T>, order: string): Array<T> {
+	salary(data: Array<any>, order: EOrderType) {
 		return data;
 	}
 
-	salary<T>(data: Array<T>, order: string): Array<T> {
-		return data;
-	}
-
-	active<T>(data: Array<T>, order: string): Array<T> {
+	active<T>(data: Array<T>, order: EOrderType): Array<T> {
 		return data;
 	}
 }
