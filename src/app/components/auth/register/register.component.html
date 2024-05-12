@@ -1,1 +1,25 @@
-<p>register works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>   
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form action="your-registration-endpoint" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <select name="Select Role" required>
+                <option disabled selected>Select Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Applicant">Applicant</option>
+                <option value="Manager">Manager</option>
+            </select>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
