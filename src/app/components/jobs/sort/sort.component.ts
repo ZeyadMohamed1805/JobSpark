@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatRadioGroup, MatRadioButton } from '@angular/material/radio';
 
 @Component({
@@ -8,4 +8,10 @@ import { MatRadioGroup, MatRadioButton } from '@angular/material/radio';
 	templateUrl: './sort.component.html',
 	styleUrl: './sort.component.scss',
 })
-export class SortComponent {}
+export class SortComponent {
+	@Output() sendSort = new EventEmitter<string>();
+
+	onRadioButtonChange(value: string) {
+		this.sendSort.emit(value);
+	}
+}

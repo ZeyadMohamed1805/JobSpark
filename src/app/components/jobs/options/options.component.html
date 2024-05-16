@@ -1,7 +1,7 @@
-<form class="options">
+<form class="options" (submit)="onApplyClick($event)">
 	<mat-tab-group>
 		<mat-tab label="Sort">
-			<app-sort />
+			<app-sort (sendSort)="onSortChange($event)" />
 		</mat-tab>
 		<mat-tab label="Filter">
 			<ng-template mat-tab-label> Filtering </ng-template>
