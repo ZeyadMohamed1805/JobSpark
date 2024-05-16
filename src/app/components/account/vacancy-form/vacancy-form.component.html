@@ -1,1 +1,29 @@
-<p>vacancy-form works!</p>
+<div class="post-job-container">
+    <h2>Post Job</h2>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" [(ngModel)]="job.companyName" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" [(ngModel)]="job.title" required>
+      </div>
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" [(ngModel)]="job.category" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <select id="time" name="time" [(ngModel)]="job.time" required>
+          <option value="Full time">Full time</option>
+          <option value="Part time">Part time</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" [(ngModel)]="job.description" rows="5" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
