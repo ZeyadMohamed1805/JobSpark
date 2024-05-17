@@ -1,28 +1,31 @@
-import { THomeVacancyCard } from '../../common/cards/home-vacancy-card/home-vacancy-card.types';
+import { THomeVacancyDTO } from '../../../types/dtos/home-vacany';
 
-export const cardsData: Array<THomeVacancyCard> = [
+export const cardsData: Array<THomeVacancyDTO> = [
 	{
-		image: '../../../../../assets/images/vertical-logo.svg',
-		title: 'title',
-		company: 'company',
-		category: 'category',
-		date: new Date(),
-		description: 'description',
+		id: 1,
+		name: 'Senior Full Stack Engineer',
+		companyName: 'ABC Company',
+		categoryName: 'Technology',
+		openDate: new Date(),
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fugit ipsam veniam consequatur id excepturi tempora aliquid rem suscipit accusamus. Deleniti maiores iste sed saepe.',
 	},
 	{
-		image: '../../../../../assets/images/vertical-logo.svg',
-		title: 'title',
-		company: 'company',
-		category: 'category',
-		date: new Date(),
-		description: 'description',
+		id: 2,
+		name: 'Senior Full Stack Engineer',
+		companyName: 'ABC Company',
+		categoryName: 'Technology',
+		openDate: new Date(),
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fugit ipsam veniam consequatur id excepturi tempora aliquid rem suscipit accusamus. Deleniti maiores iste sed saepe.',
 	},
 	{
-		image: '../../../../../assets/images/vertical-logo.svg',
-		title: 'title',
-		company: 'company',
-		category: 'category',
-		date: new Date(),
-		description: 'description',
+		id: 3,
+		name: 'Senior Full Stack Engineer',
+		companyName: 'ABC Company',
+		categoryName: 'Technology',
+		openDate: new Date(),
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fugit ipsam veniam consequatur id excepturi tempora aliquid rem suscipit accusamus. Deleniti maiores iste sed saepe.',
 	},
 ];
