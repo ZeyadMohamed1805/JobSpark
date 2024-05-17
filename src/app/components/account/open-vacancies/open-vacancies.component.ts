@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { JobsVacancyCardComponent } from '../../common/cards/jobs-vacancy-card/jobs-vacancy-card.component';
-import { TJobsVacancy } from '../../common/cards/jobs-vacancy-card/jobs-vacancy-card.types';
 import { data } from '../../jobs/job-list/job-list.component.constants';
 import { Vacancy } from '../../../models/vacancy';
+import { OrderService } from '../../../services/order/order.service';
+import { EOrderType } from '../../../utils/sorting/sorting.types';
 
 @Component({
 	selector: 'app-open-vacancies',
@@ -11,6 +12,12 @@ import { Vacancy } from '../../../models/vacancy';
 	templateUrl: './open-vacancies.component.html',
 	styleUrl: './open-vacancies.component.scss',
 })
-export class OpenVacanciesComponent {
-	vacancyData: Array<Vacancy> = data;
+export class OpenVacanciesComponent implements OnInit {
+	vacancyData: Array<Vacancy> = [];
+
+	constructor(private orderService: OrderService) {}
+
+	ngOnInit(): void {
+		this.vacancyData = this.orderService.byRecent(data, EOrderType.ASC);
+	}
 }
