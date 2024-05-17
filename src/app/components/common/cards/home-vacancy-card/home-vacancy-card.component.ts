@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { THomeVacancyCard } from './home-vacancy-card.types';
+import { THomeVacancyDTO } from '../../../../types/dtos/home-vacany';
 
 @Component({
 	selector: 'app-home-vacancy-card',
@@ -9,5 +9,5 @@ import { THomeVacancyCard } from './home-vacancy-card.types';
 	styleUrl: './home-vacancy-card.component.scss',
 })
 export class HomeVacancyCardComponent {
-	@Input() data: THomeVacancyCard | null = null;
+	@Input() data: THomeVacancyDTO | null = null;
 }

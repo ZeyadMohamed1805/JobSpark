@@ -3,8 +3,8 @@
 		{{ data?.header | titlecase }}
 	</h3>
 	<div class="cards-container">
-		<app-home-vacancy-card />
-		<app-home-vacancy-card />
-		<app-home-vacancy-card />
+		@for(card of cardsData; track card.id) {
+		<app-home-vacancy-card [data]="card" />
+		}
 	</div>
 </section>

@@ -3,7 +3,7 @@ import { HomeVacancyCardComponent } from '../../common/cards/home-vacancy-card/h
 import { TVacancy } from './vacancies.component.types';
 import { TitleCasePipe } from '@angular/common';
 import { cardsData } from './vacancies.component.constants';
-import { THomeVacancyCard } from '../../common/cards/home-vacancy-card/home-vacancy-card.types';
+import { THomeVacancyDTO } from '../../../types/dtos/home-vacany';
 
 @Component({
 	selector: 'app-vacancies',
@@ -14,5 +14,5 @@ import { THomeVacancyCard } from '../../common/cards/home-vacancy-card/home-vaca
 })
 export class VacanciesComponent {
 	@Input() data: TVacancy | null = null;
-	cardsData: Array<THomeVacancyCard> = cardsData;
+	cardsData: Array<THomeVacancyDTO> = cardsData;
 }

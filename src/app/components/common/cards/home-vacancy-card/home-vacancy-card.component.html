@@ -1,3 +1,4 @@
+@if (data) {
 <div class="vacancy-card shadow">
 	<img
 		src="../../../../../assets/images/hero.svg"
@@ -5,20 +6,19 @@
 		class="shadow"
 	/>
 	<div class="vacancy-card-body">
-		<h3>Senior Full Stack Engineer</h3>
+		<h3>{{ data.name }}</h3>
 		<div>
-			<h4>ABC Company</h4>
-			<div>Technology</div>
+			<h4>{{ data.companyName }}</h4>
+			<div>{{ data.categoryName }}</div>
 		</div>
-		<span> 2 days ago </span>
+		<span> {{ data.openDate.toLocaleDateString() }} </span>
 	</div>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fugit
-		ipsam veniam consequatur id excepturi tempora aliquid rem suscipit
-		accusamus. Deleniti maiores iste sed saepe.
+		{{ data.description }}
 	</p>
 	<div class="vacancy-card-footer">
 		<button>Visit Company</button>
 		<button class="apply">Apply Now</button>
 	</div>
 </div>
+}
