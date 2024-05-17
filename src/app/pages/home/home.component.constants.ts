@@ -2,5 +2,5 @@ import { TVacancy } from '../../components/home/vacancies/vacancies.component.ty
 
 export const vacancyData: Array<TVacancy> = [
 	{ header: 'most recent', sortingType: 'most-recent' },
-	{ header: 'most actively reviewed', sortingType: 'most-active-review' },
+	{ header: 'alphabetically', sortingType: 'alphabetically' },
 ];
