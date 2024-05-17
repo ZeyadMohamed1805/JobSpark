@@ -1,18 +1,38 @@
-<div class="post-job-container">
-    <h2>Post Job</h2>
-    <form (ngSubmit)="submitForm()">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post job</title>   
+</head>
+<body>
+    <form class="post-job-container"  (ngSubmit)="submitForm()">
+      <h2>Post job</h2>
+
       <div class="form-group">
         <label for="companyName">Company Name:</label>
-        <input type="text" id="companyName" name="companyName" [(ngModel)]="job.companyName" required>
+        <input type="text" id="companyName" name="companyName" [(ngModel)]="job.companyName" required #comnameRef="ngModel">
+        <div *ngIf="comnameRef.invalid && comnameRef.touched" class="text-danger">
+          Company Name is required
       </div>
+      </div>
+
       <div class="form-group">
         <label for="title">Title:</label>
-        <input type="text" id="title" name="title" [(ngModel)]="job.title" required>
+        <input type="text" id="title" name="title" [(ngModel)]="job.title" required #titleRef="ngModel">
+        <div *ngIf="titleRef.invalid && titleRef.touched" class="text-danger">
+          Title is required
       </div>
+      </div>
+
       <div class="form-group">
         <label for="category">Category:</label>
-        <input type="text" id="category" name="category" [(ngModel)]="job.category" required>
+        <input type="text" id="category" name="category" [(ngModel)]="job.category" required #categoryRef="ngModel"> 
+        <div *ngIf="categoryRef.invalid && categoryRef.touched" class="text-danger">
+          Category is required
       </div>
+      </div>
+
       <div class="form-group">
         <label for="time">Time:</label>
         <select id="time" name="time" [(ngModel)]="job.time" required>
@@ -22,8 +42,12 @@
       </div>
       <div class="form-group">
         <label for="description">Description:</label>
-        <textarea id="description" name="description" [(ngModel)]="job.description" rows="5" required></textarea>
+        <textarea id="description" name="description" [(ngModel)]="job.description" rows="5" required #descRef="ngModel"></textarea>
+        <div *ngIf="descRef.invalid && descRef.touched" class="text-danger">
+          Description is required
+      </div>
       </div>
       <button type="submit">Submit</button>
     </form>
-  </div>
+  </body>
+  </html>

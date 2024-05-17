@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Login</title>
-   
+    <title>Login</title>
 </head>
 <body>
-    <div class="login-container">
+    <form class="login-container" #loginForm="ngForm" >
         <h2>Login</h2>
-        <form action="your-login-endpoint" method="POST">
-            <input type="text" name="Email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
-        </form>
-    </div>
+        
+        <div class="input-container">
+            <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required #emailRef="ngModel">
+            <div *ngIf="emailRef.invalid && emailRef.touched" class="text-danger">
+                Email is required
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <input type="password" name="password" placeholder="Password" [(ngModel)]="password" required #passwordRef="ngModel">
+            <div *ngIf="passwordRef.invalid && passwordRef.touched" class="text-danger">
+                Password is required
+            </div>
+        </div>
+        
+        <button type="submit" (click)="onSubmit(loginForm)">Login</button>
+    </form >
 </body>
 </html>
