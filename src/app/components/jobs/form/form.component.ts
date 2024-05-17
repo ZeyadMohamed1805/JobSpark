@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { OptionsComponent } from '../options/options.component';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-form',
@@ -17,10 +16,10 @@ export class FormComponent {
 
 	onFilterOptionsClick(event: any): void {
 		event.preventDefault();
-		this.dialog.open<OptionsComponent>(OptionsComponent);
-	}
+		const dialogRef = this.dialog.open<OptionsComponent>(OptionsComponent);
 
-	onApplyClick(): void {
-		this.dialog.closeAll();
+		dialogRef.componentInstance.closeDialog.subscribe(() => {
+			dialogRef.close();
+		});
 	}
 }

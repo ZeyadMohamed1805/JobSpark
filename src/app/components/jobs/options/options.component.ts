@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatTabGroup, MatTab } from '@angular/material/tabs';
 import { SortComponent } from '../sort/sort.component';
 import { FilterComponent } from '../filter/filter.component';
@@ -13,6 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class OptionsComponent {
 	sortingChoice: string;
+	@Output() closeDialog = new EventEmitter();
 
 	constructor(
 		private router: Router,
@@ -30,5 +31,6 @@ export class OptionsComponent {
 	onApplyClick(event: any): void {
 		event.preventDefault();
 		this.router.navigateByUrl(`jobs?sort=${this.sortingChoice}`);
+		this.closeDialog.emit();
 	}
 }
