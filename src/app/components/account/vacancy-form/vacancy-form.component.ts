@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-vacancy-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './vacancy-form.component.html',
   styleUrl: './vacancy-form.component.scss'
 })
@@ -19,7 +20,6 @@ export class VacancyFormComponent {
 
   submitForm() {
     console.log('Form submitted:', this.job);
-    // Here you can send the form data to your backend or perform any other action
   }
 
 }

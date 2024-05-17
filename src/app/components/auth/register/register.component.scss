@@ -20,11 +20,9 @@ body {
     color: var(--secondary-color);
 }
 
-.register-container input[type="text"],
-.register-container input[type="password"],
-.register-container input[type="email"],
+.register-container input,
 .register-container select,
-.register-container input[type="submit"] {
+.register-container button {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
@@ -34,15 +32,24 @@ body {
     outline: none;    
 }
 
-.register-container input[type="submit"] {
+.register-container button {
     background-color: var(--secondary-color);
     color: var(--white-color);
     cursor: pointer;
 }
 
-.register-container input[type="submit"]:hover {
+.register-container button:hover {
     background-color: var(--opacity-secondary-color);
 }
 .register-container select option::after {
     background-color: var(--secondary-color);
 }
+
+::ng-deep .mat-mdc-dialog-panel{
+    width: 400px;
+  }
+
+
+.input-container{
+    width: 100%;
+  }

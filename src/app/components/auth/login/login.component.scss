@@ -4,7 +4,7 @@ body {
 
 .login-container {
     width: 100%;
-    max-width: 400px;
+    // max-width: 400px;
     background-color: var(--primary-color);
     padding: 20px;
     border-radius: 8px;
@@ -20,9 +20,8 @@ body {
     color: var(--secondary-color);
 }
 
-.login-container input[type="text"],
-.login-container input[type="password"],
-.login-container input[type="submit"] {
+.login-container input,
+.login-container button {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
@@ -32,14 +31,22 @@ body {
     outline: none;
 }
 
-.login-container input[type="submit"] {
+.login-container button {
     background-color: var(--secondary-color);
     color: var(--white-color);
     cursor: pointer;
 }
 
-.login-container input[type="submit"]:hover {
+.login-container button:hover {
     background-color: var(--opacity-secondary-color);
     transition-duration: 0.25s;
 }
+
+::ng-deep .mat-mdc-dialog-panel{
+    width: 400px;
+  }
+
+  .input-container{
+    width: 100%;
+  }
 

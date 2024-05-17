@@ -6,20 +6,38 @@
     <title>Registration</title>   
 </head>
 <body>
-    <div class="register-container">
+    <form class="register-container" #registerForm="ngForm">
         <h2>Register</h2>
-        <form action="your-registration-endpoint" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <select name="Select Role" required>
-                <option disabled selected>Select Role</option>
-                <option value="Admin">Admin</option>
-                <option value="Applicant">Applicant</option>
-                <option value="Manager">Manager</option>
-            </select>
-            <input type="submit" value="Register">
-        </form>
-    </div>
+        <div class="input-container">
+            <input type="text" name="name" placeholder="Name" [(ngModel)]="name"  required #nameRef="ngModel">
+            <div *ngIf="nameRef.invalid && nameRef.touched" class="text-danger">
+                Name is required
+            </div>
+
+        </div>
+            <div class="input-container">
+                <input type="password" name="password" placeholder="Password" [(ngModel)]="password" required #passwordRef="ngModel">
+                <div *ngIf="passwordRef.invalid && passwordRef.touched" class="text-danger">
+                    Password is required
+                </div>    
+            </div>
+           
+            <div class="input-container">
+                <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required #emailRef="ngModel">
+                <div *ngIf="emailRef.invalid && emailRef.touched" class="text-danger">
+                    Email is required
+                </div>    
+            </div>
+
+            <div class="input-container">
+                <select name="SelectRole" required>
+                    <!-- <option disabled selected>Select Role</option> -->
+                    <option value="Applicant">Applicant</option>
+                    <option value="Manager">Manager</option>
+                </select>
+            </div>
+           
+            <button type="submit" (click)="onSubmit(registerForm)">Login</button>
+    </form>
 </body>
 </html>
