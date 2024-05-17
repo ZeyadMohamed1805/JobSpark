@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TJobsVacancy } from './jobs-vacancy-card.types';
+import { Vacancy } from '../../../../models/vacancy';
 
 @Component({
 	selector: 'app-jobs-vacancy-card',
@@ -9,5 +10,5 @@ import { TJobsVacancy } from './jobs-vacancy-card.types';
 	styleUrl: './jobs-vacancy-card.component.scss',
 })
 export class JobsVacancyCardComponent {
-	@Input() data: TJobsVacancy | null = null;
+	@Input() data: Vacancy | null = null;
 }
