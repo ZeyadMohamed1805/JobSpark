@@ -1,9 +1,14 @@
 <div class="sort">
-	<mat-radio-group aria-label="Sorting Options">
-		<mat-radio-button value="0">Alphabetically</mat-radio-button>
-		<mat-radio-button value="1">Most Recent</mat-radio-button>
-		<mat-radio-button value="2">Highest Rated Company</mat-radio-button>
-		<mat-radio-button value="3">Biggest Salary Offered</mat-radio-button>
-		<mat-radio-button value="3">Most Active Reviewer</mat-radio-button>
+	<mat-radio-group
+		aria-label="Sorting Options"
+		(change)="onRadioButtonChange($event.value)"
+	>
+		<mat-radio-button value="alphabetically"
+			>Alphabetically</mat-radio-button
+		>
+		<mat-radio-button value="most-recent">Most Recent</mat-radio-button>
+		<mat-radio-button value="most-active-reviewer"
+			>Most Active Reviewer</mat-radio-button
+		>
 	</mat-radio-group>
 </div>

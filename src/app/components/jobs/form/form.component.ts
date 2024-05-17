@@ -10,10 +10,16 @@ import { OptionsComponent } from '../options/options.component';
 	styleUrl: './form.component.scss',
 })
 export class FormComponent {
+	sortType: string | null = null;
+
 	constructor(private dialog: MatDialog) {}
 
 	onFilterOptionsClick(event: any): void {
 		event.preventDefault();
-		this.dialog.open<OptionsComponent>(OptionsComponent);
+		const dialogRef = this.dialog.open<OptionsComponent>(OptionsComponent);
+
+		dialogRef.componentInstance.closeDialog.subscribe(() => {
+			dialogRef.close();
+		});
 	}
 }

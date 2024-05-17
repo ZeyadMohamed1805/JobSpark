@@ -9,11 +9,22 @@ import { companySize } from '../../utils/sorting/company-size/company-size';
 	providedIn: 'root',
 })
 export class OrderService {
-	byAlphabet(data: Array<any>, order: EOrderType) {
+	sort<T>(type: string, data: Array<T>, order: EOrderType): Array<T> {
+		switch (type) {
+			case 'most-recent':
+				return this.byRecent(data, order);
+			case 'most-active-reviewer':
+				return this.byActive(data, order);
+			default:
+				return this.byAlphabet(data, order);
+		}
+	}
+
+	byAlphabet<T>(data: Array<T>, order: EOrderType): Array<T> {
 		return alphabet(data, order);
 	}
 
-	byRecent(data: Array<any>, order: EOrderType) {
+	byRecent<T>(data: Array<T>, order: EOrderType): Array<T> {
 		return recent(data, order);
 	}
 
