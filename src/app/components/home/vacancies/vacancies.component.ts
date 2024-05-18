@@ -32,7 +32,7 @@ export class VacanciesComponent implements OnInit {
   fetchVacancies(): void {
     this.apiService.get<any>('api/Vacancy').subscribe(
       (data) => {
-		console.log(data.data);
+
       //  this.cardsData = data;
 	  if (this.data?.sortingType === 'most-recent') {
 		this.cardsData = this.orderService.byRecent(data.data, EOrderType.ASC);

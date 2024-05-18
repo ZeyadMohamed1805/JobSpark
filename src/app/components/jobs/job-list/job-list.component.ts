@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { OrderService } from '../../../services/order/order.service';
 import { EOrderType } from '../../../utils/sorting/sorting.types';
 import { Vacancy } from '../../../models/vacancy';
+import { ApiService } from '../../../services/api/api.service';
 
 @Component({
 	selector: 'app-job-list',
@@ -16,16 +17,20 @@ import { Vacancy } from '../../../models/vacancy';
 export class JobListComponent implements OnInit {
 	vacancies: Array<Vacancy> = [];
 	sortType: string = 'alphabetically';
+	data:any=[];
 
 	constructor(
 		private activatedRoute: ActivatedRoute,
-		private orderService: OrderService
+		private orderService: OrderService,
+		private apiService:ApiService
 	) {}
 
 	ngOnInit(): void {
+		this.fetchVacancies();
 		this.activatedRoute.queryParams.subscribe((queryParams) => {
 			this.sortType = queryParams['sort'];
 			this.onSort();
+
 		});
 	}
 
@@ -36,4 +41,13 @@ export class JobListComponent implements OnInit {
 			EOrderType.ASC
 		);
 	}
+
+	fetchVacancies(): void {
+		this.apiService.get<any>('api/Vacancy').subscribe(
+		  (data) => {
+			console.log(data.data);
+
+		  },
+		);
+	  }
 }
